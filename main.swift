@@ -15,6 +15,8 @@ let se = CFStringConvertEncodingToNSStringEncoding(cfe)
 let encoding = String.Encoding(rawValue: se)
 
 let filePath = "/Users/nick/Desktop/ToTheLighthouse.txt"
+let resultPath = "/Users/nick/Desktop/ToTheLighthouseWords.txt"
+
 print(FileManager.default.isReadableFile(atPath: filePath))
 let fileData = FileManager.default.contents(atPath: filePath)
 print(fileData ?? "`fileData` is nil")
@@ -44,8 +46,7 @@ for s in lemmaArray {
 print("file done")
 
 let seperatedData = seperatedString.data(using: .utf8)
-let seperatedPath = "/Users/nick/Desktop/ToTheLighthouseWords.txt"
-let res = FileManager.default.createFile(atPath: seperatedPath, contents: seperatedData, attributes: nil)
+let res = FileManager.default.createFile(atPath: resultPath, contents: seperatedData, attributes: nil)
 print("new file created -> \(res)")
 
 
