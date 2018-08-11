@@ -1,2 +1,2 @@
 # WordsExporter
-Export a txt file which contains the words of the imported book.
+Export a txt file which contains words of the imported book.
